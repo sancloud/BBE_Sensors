@@ -170,7 +170,7 @@ void* ag_read_thread(void* arg) {
 			ag_pass = false;
 
 
-		DEBUG_MSG( "%05d   %7.2f mb       %05d     %7.2f C\n", pressure, (pressure*pressure_scale)*10, temp_raw, temp_offset+(temp_raw*temp_scale));
+		DEBUG_MSG( "%05d   %7.2f mb       %05d     %7.2f C\n", pressure, (pressure*pressure_scale)*10, temp_raw, (temp_offset+temp_raw)*temp_scale/1000);
 
 		loop_count++;
 	}
