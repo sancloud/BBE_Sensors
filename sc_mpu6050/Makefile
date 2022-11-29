@@ -2,7 +2,7 @@
 #PKG_CONFIG_PATH=$(ROOTFS)/usr/lib/arm-linux-gnueabihf/pkgconfig
 CC=$(CROSS_COMPILE)gcc
 CFLAGS=-g -c -Wall -DLINUX
-LDFLAGS= -L$(ROOTFS)/usr/lib -lm -L$(ROOTFS)/usr/lib/arm-linux-gnueabihf/ -lpthread
+LDFLAGS= -L$(ROOTFS)/usr/lib -lm -L$(ROOTFS)/usr/lib/arm-linux-gnueabihf/ -pthread
 CFLAGS+=-I$(PWD) -I/usr/include/
 		
 SOURCES=simple_read.c sysfs_helper.c
